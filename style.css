@@ -1,0 +1,50 @@
+body{
+  background-color: #CDCDB6;
+  font-family: 'Times New Roman', Times, serif;
+}
+.box{
+  width: 230px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.box:hover .box-content{
+  transform: rotateY(180deg);
+}
+.box-content{
+  position: relative;
+  width: 230px;
+  height: 250px;
+  
+  transform-style: preserve-3d;
+  transition: transform 0.2s;
+}
+.box-front,
+.box-back{
+  position: absolute;
+  width: 230px;
+  height: 250px;
+  padding: 10px;
+  box-shadow: 0 0 3px 0.1px #6C6D6F;
+  border-radius: 10px;
+}
+.box-front h1{
+  text-shadow: 1px 1px 3px #FFFFFF;
+}
+.box-front p{
+  font-size: 25px;
+}
+.box-front{
+  background-color: #A0EC3A;
+  color: #363F27;
+  text-align: center
+}
+.box-back{
+  backface-visibility: hidden;
+    transform: rotateY(180deg);
+  background-color: #E8E7E7;
+  color: #2A2B29;
+
+}
